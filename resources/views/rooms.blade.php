@@ -19,7 +19,7 @@
             @foreach ($rooms as $room)
                 <div class="col-md-4">
                     <div class="hotel-content">
-                        <div class="hotel-grid" style="background-image: url({{env('APP_URL').'/storage'.$room->image}});">
+                        <div class="hotel-grid" style="background-image: url({{asset('/storage/'.$room->image)}});">
                             <div class="price"><small>For as low as</small><span>${{$room->price_per_night}}/night</span></div>
                             <a class="book-now text-center" href="/rooms/{{$room->id}}/book"><i class="ti-calendar"></i> Book Now</a>
                         </div>

@@ -67,10 +67,8 @@ class RoomsController extends Controller
     {
         $data = $request->except('_token');
         // $request->file['image'];
-        $image_name = \Str::random(10) . '.' . $request->image->getClientOriginalExtension();
-        // Storage::disk('public')->put("/rooms/$image_name", $request->image);
-        $request->file('image')->storeAs('/rooms', $image_name, 'public');
-        $data['image'] = '/rooms/' . $image_name;
+        $image = Storage::disk('public')->put("/rooms", $request->image);
+        $data['image'] = $image;
         $room = Room::create($data);
         return redirect('/admin/rooms');
     }

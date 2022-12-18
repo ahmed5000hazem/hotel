@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('reservations', function (Blueprint $table) {
-            $table->foreignId('room_id')->nullable();
-            $table->foreignId('user_id')->nullable();
+            $table->foreignId('room_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->nullable();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->nullable();
         });
     }
 

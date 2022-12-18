@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 @include('components.site-header')
-<div class="fh5co-parallax" style="background-image: url(images/slider1.jpg);" data-stellar-background-ratio="0.5">
+<div class="fh5co-parallax" style="background-image: url(/storage/slider/slider2.jpg);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">

@@ -30,7 +30,7 @@
                         <td class="border border-slate-700">{{$room->area}} M <sup>2</sup> </td>
                         <td class="border border-slate-700">{{$room->people_number}} people</td>
                         <td class="border border-slate-700 p-1">
-                            <img class="w-24" src="{{env('APP_URL').'/storage'.$room->image}}" alt="">
+                            <img class="w-24" src="{{env('APP_URL').'/storage/'.$room->image}}" alt="">
                         </td>
                         <td class="border border-slate-700">{{$room->status}}</td>
                         <td class="border border-slate-700">{{$room->created_at}}</td>
